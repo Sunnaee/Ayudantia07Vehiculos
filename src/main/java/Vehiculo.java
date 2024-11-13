@@ -14,6 +14,8 @@ public class Vehiculo {
 	private int anio;
 	private int precio;
 
+	public Vehiculo(){}
+
 	public Vehiculo(String marca, String modelo, int anio, int precio){
 		this.marca = marca;
 		this.modelo = modelo;

@@ -6,13 +6,12 @@ public class Automotora {
 
 	public Automotora(){
 		this.vehiculos = new ArrayList<Vehiculo>();
+		this.gestor = new GestorDeDatos();
 	}
 
 	public boolean existeVehiculo(Vehiculo vehiculo) {
-		for (Vehiculo vehiculoEnLista : this.vehiculos){
-			if (vehiculoEnLista == vehiculo) {
-				return true;
-			}
+		if (this.vehiculos.contains(vehiculo)) {
+			return true;
 		}
 		return false;
 	}

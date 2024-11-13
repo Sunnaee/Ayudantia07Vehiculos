@@ -1,5 +1,10 @@
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Camion extends Vehiculo {
+	@JsonProperty("capacidadCargaToneladas")
 	private int capCarga;
+
+	public Camion(){}
 
 	public Camion(String marca, String modelo, int anio, int precio, int capCarga){
 		super(marca, modelo, anio, precio);
