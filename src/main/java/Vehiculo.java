@@ -55,11 +55,6 @@ public class Vehiculo {
 
 	@Override
 	public String toString() {
-		return "Vehiculo{" +
-				"marca='" + marca + '\'' +
-				", modelo='" + modelo + '\'' +
-				", anio=" + anio +
-				", precio=" + precio +
-				'}';
+		return " | Marca = "+this.marca+" | Modelo = "+this.modelo+" | Año = "+this.anio+" | Precio = $"+this.precio;
 	}
 }

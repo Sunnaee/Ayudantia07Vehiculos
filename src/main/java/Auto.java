@@ -16,9 +16,6 @@ public class Auto extends Vehiculo {
 
 	@Override
 	public String toString() {
-		return "Auto{" +
-				super.toString() +
-				"numPuertas=" + numPuertas +
-				'}';
+		return "Vehiculo = Auto"+super.toString()+" | Número de puertas = "+this.numPuertas;
 	}
 }

@@ -16,9 +16,6 @@ public class Bicicleta extends Vehiculo {
 
 	@Override
 	public String toString() {
-		return "Bicicleta{" +
-				super.toString() +
-				"tipo='" + tipo + '\'' +
-				'}';
+		return "Vehiculo = Bicicleta"+super.toString()+" | Tipo de bicicleta = "+this.tipo;
 	}
 }

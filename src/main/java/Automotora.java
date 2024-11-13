@@ -8,27 +8,38 @@ public class Automotora {
 		this.vehiculos = new ArrayList<Vehiculo>();
 	}
 
-	public boolean buscarVehiculo(Vehiculo vehiculo) {
-		throw new UnsupportedOperationException();
+	public boolean existeVehiculo(Vehiculo vehiculo) {
+		for (Vehiculo vehiculoEnLista : this.vehiculos){
+			if (vehiculoEnLista == vehiculo) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public boolean agregarVehiculo(Vehiculo vehiculo) {
-		throw new UnsupportedOperationException();
+		if (!existeVehiculo(vehiculo)) {
+			vehiculos.add(vehiculo);
+			return true;
+		}
+		return false;
 	}
 
 	public void mostrarVehiculo(Vehiculo vehiculo) {
-		throw new UnsupportedOperationException();
+		System.out.println(vehiculo.toString());
 	}
 
 	public void listarVehiculos() {
-		throw new UnsupportedOperationException();
+		for (Vehiculo vehiculoEnLista : this.vehiculos) {
+			mostrarVehiculo(vehiculoEnLista);
+		}
 	}
 
 	public void guardarDatos() {
-		throw new UnsupportedOperationException();
+		gestor.guardarJson(this.vehiculos,"vehiculos.json");
 	}
 
 	public void cargarDatos() {
-		throw new UnsupportedOperationException();
+		this.vehiculos = gestor.leerJson("vehiculos.json", Vehiculo.class);
 	}
 }

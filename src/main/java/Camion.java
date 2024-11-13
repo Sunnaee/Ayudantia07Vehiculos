@@ -16,9 +16,6 @@ public class Camion extends Vehiculo {
 
 	@Override
 	public String toString() {
-		return "Camion{" +
-				super.toString() +
-				"capCarga=" + capCarga +
-				'}';
+		return "Vehiculo = Camión"+super.toString()+" | Capacidad de Carga = "+this.capCarga;
 	}
 }
