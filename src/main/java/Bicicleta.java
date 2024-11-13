@@ -2,25 +2,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Bicicleta extends Vehiculo {
 	@JsonProperty("tipoBicicleta")
+	private String tipoBici;
 	private String tipo;
 
 	public Bicicleta(){}
 
-	public Bicicleta(String marca, String modelo, int anio, int precio, String tipo){
+	public Bicicleta(String marca, String modelo, int anio, int precio, String tipoBici){
 		super(marca, modelo, anio, precio);
-		this.tipo = tipo;
+		this.tipoBici = tipoBici;
+		this.tipoBici = "Bicicleta";
 	}
 
-	public String getTipo() {
-		return this.tipo;
+	public String getTipo(){
+		return "Bicicleta";
 	}
 
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
+	public String getTipoBici() {
+		return this.tipoBici;
+	}
+
+	public void setTipoBici(String tipoBici) {
+		this.tipoBici = tipoBici;
 	}
 
 	@Override
 	public String toString() {
-		return "Vehiculo = Bicicleta"+super.toString()+" | Tipo de bicicleta = "+this.tipo;
+		return "Vehiculo = "+getTipo()+super.toString()+" | Tipo de bicicleta = "+this.tipoBici;
 	}
 }

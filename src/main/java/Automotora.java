@@ -10,8 +10,10 @@ public class Automotora {
 	}
 
 	public boolean existeVehiculo(Vehiculo vehiculo) {
-		if (this.vehiculos.contains(vehiculo)) {
-			return true;
+		for (Vehiculo vehiculoEnLista : this.vehiculos){
+			if (this.vehiculos.contains(vehiculo)) {
+				return true;
+			}
 		}
 		return false;
 	}

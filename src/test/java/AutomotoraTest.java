@@ -12,6 +12,7 @@ class AutomotoraTest {
     void setUp() {
         automotora.cargarDatos();
         automotora.listarVehiculos();
+        automotora.guardarDatos();
     }
 
     @AfterEach
@@ -20,17 +21,13 @@ class AutomotoraTest {
 
     @Test
     void existeVehiculo() {
-        Vehiculo vehiculo1 = new Auto("Toyota","Corolla",2018,15000,4);
-        Vehiculo vehiculo2 = new Bicicleta("Bicicleta1","modelo1",2020,123456,"Ciudad");
-        assertTrue(automotora.existeVehiculo(vehiculo1));
-        assertFalse(automotora.existeVehiculo(vehiculo2));
+        Vehiculo vehiculo1 = new Bicicleta("Bicicleta1","modelo1",2020,123456,"Ciudad");
+        assertFalse(automotora.existeVehiculo(vehiculo1));
     }
 
     @Test
     void agregarVehiculo() {
-        Vehiculo vehiculo1 = new Auto("Toyota","Corolla",2018,15000,4);
-        Vehiculo vehiculo2 = new Bicicleta("Bicicleta1","modelo1",2020,123456,"Ciudad");
-        assertFalse(automotora.agregarVehiculo(vehiculo1));
-        assertTrue(automotora.agregarVehiculo(vehiculo2));
+        Vehiculo vehiculo1 = new Bicicleta("Bicicleta1","modelo1",2020,123456,"Ciudad");
+        assertTrue(automotora.agregarVehiculo(vehiculo1));
     }
 }

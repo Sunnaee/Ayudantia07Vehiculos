@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 		@JsonSubTypes.Type(value = Camion.class, name = "Camion")
 })
 
-public class Vehiculo {
+public abstract class Vehiculo {
 	private String marca;
 	private String modelo;
 	private int anio;
@@ -22,6 +22,8 @@ public class Vehiculo {
 		this.anio = anio;
 		this.precio = precio;
 	}
+
+	public abstract String getTipo();
 
 	public String getMarca() {
 		return this.marca;

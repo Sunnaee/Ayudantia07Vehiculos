@@ -3,12 +3,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Auto extends Vehiculo {
 	@JsonProperty("numeroPuertas")
 	private int numPuertas;
+	private String tipo;
 
 	public Auto(){}
 
 	public Auto(String marca, String modelo, int anio, int precio, int numPuertas){
 		super(marca, modelo, anio, precio);
 		this.numPuertas = numPuertas;
+		this.tipo = "Auto";
+	}
+
+	public String getTipo(){
+		return "Auto";
 	}
 
 	public int getNumPuertas() {
@@ -21,6 +27,6 @@ public class Auto extends Vehiculo {
 
 	@Override
 	public String toString() {
-		return "Vehiculo = Auto"+super.toString()+" | Número de puertas = "+this.numPuertas;
+		return "Vehiculo = "+getTipo()+super.toString()+" | Número de puertas = "+this.numPuertas;
 	}
 }
